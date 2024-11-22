@@ -187,3 +187,107 @@ V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1))
  <p align="center"> <img src="IMAGE/image6.png" width="65%" height="auto" /> </p>
  <p align="center"> <img src="IMAGE/image7.png" width="65%" height="auto" /> </p>
   <p align="center"> <img src="IMAGE/image8.png" width="65%" height="auto" /> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Partie 5 : Affichage des lignes équipotentielles
+
+Objectif de cette étape :
+L’objectif est de visualiser les lignes équipotentielles du potentiel V dans le domaine de calcul.
+Ces lignes représentent les zones où le potentiel est constant, offrant une meilleure compréhension
+des interactions électrostatiques dans le système.
+
+Méthode et description
+
+1. Initialisation du calcul :
+• Les dimensions du domaine sont configurées pour différentes tailles (10 × 10, 20 × 20, 40 × 40, 80 × 80, 100 × 100).
+• Les conducteurs sont positionnés proportionnellement à chaque taille, avec des potentiels fixés (+100 V pour le conducteur 1, -100 V pour le conducteur 2).
+• Les conditions aux limites (V = 0) sont appliquées sur les bords.
+
+2. Résolution de l’équation de Laplace :
+• Une résolution itérative est réalisée jusqu’à ce que le critère de convergence soit atteint (seuil = 0.01) ou jusqu’à un maximum de 1000 itérations.
+• Le potentiel V est mis à jour à chaque itération, en réimposant les potentiels fixes pour les conducteurs.
+
+3. Visualisation des lignes équipotentielles :
+• La fonction contour est utilisée pour tracer les lignes équipotentielles superposées à la carte de couleurs du potentiel V.
+• Les figures obtenues montrent les lignes équipotentielles pour chaque taille de domaine, mettant en évidence les transitions entre les zones de potentiel.
+
+Partie 6 : Calcul du champ électrostatique
+
+Objectif de cette étape :
+L’objectif est de calculer et de représenter les composantes du champ électrique E⃗ dans tout le domaine de calcul.
+Le champ électrique est obtenu en calculant le gradient du potentiel V, ce qui permet de visualiser les interactions électrostatiques à travers le domaine.
+
+Méthode et description
+
+1. Initialisation du calcul :
+• Les dimensions du domaine sont configurées pour différentes tailles (10 × 10, 20 × 20, 40 × 40, 80 × 80, 100 × 100).
+• Les conducteurs (+100 V et -100 V) sont positionnés proportionnellement à chaque taille, en maintenant leurs emplacements relatifs.
+• Les conditions aux limites (V = 0) sont appliquées sur les bords du domaine.
+
+2. Calcul du potentiel V :
+• L’équation de Laplace est résolue par différences finies en itérant jusqu’à ce que le critère de convergence soit atteint (seuil = 0.01) ou jusqu’à un maximum de 1000 itérations.
+• Le potentiel V est mis à jour à chaque itération en réimposant les valeurs fixes pour les conducteurs.
+
+3. Calcul des composantes du champ électrique :
+• Une fois la convergence atteinte, les composantes Ex et Ey du champ électrique sont calculées comme suit :
+Ex = −∂V/∂x, Ey = −∂V/∂y
+• Ces composantes sont obtenues en utilisant la fonction gradient de MATLAB/Octave, qui calcule le gradient spatial du potentiel.
+
+4. Visualisation des résultats :
+• Une représentation graphique du potentiel V est superposée aux lignes équipotentielles à l’aide de la fonction contour.
+• Les vecteurs représentant le champ électrique E⃗ sont affichés avec la fonction quiver, indiquant la direction et la magnitude du champ en chaque point.
+
+Partie 7 : Calculs de capacités
+
+Objectif de cette étape :
+L’objectif est de calculer la capacité Cij entre deux conducteurs dans un domaine 2D en utilisant la solution de l’équation de Laplace.
+La capacité est obtenue à partir de la charge totale Qi sur un conducteur et de la différence de potentiel entre les deux conducteurs (Vj − Vi).
+
+Méthode et description
+
+1. Initialisation du calcul :
+• Le domaine est configuré avec des dimensions variables (10 × 10, 20 × 20, 40 × 40, 80 × 80, 100 × 100).
+• Les conducteurs sont positionnés proportionnellement à la taille du domaine, avec des potentiels fixés (+100 V pour le conducteur 1, -100 V pour le conducteur 2).
+• Les conditions aux limites (V = 0) sont appliquées sur tous les bords.
+
+2. Résolution de l’équation de Laplace :
+• Une résolution itérative est réalisée jusqu’à atteindre un critère de convergence (seuil = 0.01) ou un maximum de 1000 itérations.
+• Le potentiel V est mis à jour à chaque itération, avec réimposition des potentiels des conducteurs.
+
+3. Calcul de la charge Qi :
+• Les composantes Ex et Ey du champ électrique sont calculées à partir du gradient du potentiel :
+Ex = −∂V/∂x, Ey = −∂V/∂y
+• L’intégrale discrète de Gauss est utilisée pour calculer la charge Qi entourant le conducteur 1 :
+Qi = ε0 ∮ E⃗ ⋅ dS⃗
+• Cette intégrale est approximée comme la somme des contributions sur les quatre côtés du contour entourant le conducteur :
+- Bord gauche : Contribution de Ey le long du côté gauche.
+- Bord droit : Contribution de Ey le long du côté droit.
+- Bord haut : Contribution de Ex le long du haut.
+- Bord bas : Contribution de Ex le long du bas.
+
+4. Calcul de la capacité Cij :
+• La capacité entre les conducteurs est obtenue par la relation :
+Cij = Qi / (Vj − Vi)
+
