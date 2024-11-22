@@ -127,7 +127,7 @@ o	Avec seuil=0.01, la convergence est atteinte en environ 284 itérations :
  <p align="center"> <img src="IMAGE/image3.png" width="65%" height="auto" /> </p>
 o	Avec seuil=0.001, la convergence est atteinte en environ 491 itérations :
 
-	<p align="center"> <img src="IMAGE/image4.png" width="65%" height="auto" /> </p>
+<p align="center"> <img src="IMAGE/image4.png" width="65%" height="auto" /> </p>
  
 •	La méthode permet d’éviter des calculs inutiles tout en obtenant une solution stable.
 
