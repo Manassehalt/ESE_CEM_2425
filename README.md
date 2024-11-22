@@ -1,5 +1,6 @@
-<p align="left"> <img src="IMAGE/logo ENSEA.png" width="15%" height="auto" /> </p>
-# ESE_CME_2425
+<p align="center"> <img src="IMAGE/logo ENSEA.png" width="30%" height="auto" /> </p>
+
+#                                                            ESE_CME_2425
 JAQUOT NOLAN GUIFFAULT GABRIEL
 ## I.	Exécution du script tp00.m
 Objectif de cette étape
@@ -44,7 +45,7 @@ Deux représentations graphiques sont produites :
  Ce graphe montre les conducteurs +100 V (en rouge) et −100V (en bleu) dans un domaine initialisé à V=0 :
  
 
-
+<p align="center"> <img src="IMAGE/image1.png" width="65%" height="auto" /> </p>
 
 
 
