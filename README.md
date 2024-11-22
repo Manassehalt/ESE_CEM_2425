@@ -3,7 +3,8 @@
 #                                                            ESE_CME_2425
 JACQUOT NOLAN GUIFFAULT GABRIEL ESE 2024
 ## I.	Exécution du script tp00.m
-Objectif de cette étape
+
+## Objectif de cette étape
 L’objectif de cette étape est d’exécuter un script MATLAB/Octave permettant de résoudre numériquement l’équation de Laplace en 2D à l’aide de la méthode des différences finies. Ce script initialise un domaine de calcul de dimensions 40×40 avec des potentiels sources et des conditions aux limites, et produit une visualisation graphique du potentiel V dans tout le domaine.
 ### Description et analyse du script
 ### _1. Définition des paramètres et du domaine de calcul_
@@ -32,7 +33,6 @@ Les conducteurs sont positionnés dans le domaine :
 
 •	Le second conducteur est une barre verticale entre les cellules (5:22,20:21)(5:22, 20:21)(5:22,20:21) avec un potentiel V=−100V.
 
-
 ##  Visualisation des résultats
    
 Cette représentation graphique est produite :
@@ -49,8 +49,6 @@ Cette représentation graphique est produite :
 > pcolor(V);
 > ````
 > permet d'obtenir le meme schéma de couleur que le sujet, ce qui permet de mieux reperer les erreurs éventuelles.
-
-
 
 # II.	Résolution itérative de l’équation de Laplace (200 itérations)
 
@@ -105,9 +103,6 @@ V : V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1));
 
 •	Le potentiel V final est affiché avec pcolor après la convergence ou après avoir atteint le nombre maximum d’itérations.
 
-
-
-
 ## Résultats 
 •	Le nombre d’itérations nécessaire pour atteindre la convergence dépend du seuil choisi (0.01,0.001, etc.). Par exemple :
 
@@ -118,15 +113,6 @@ o	Avec seuil=0.001, la convergence est atteinte en environ 491 itérations :
 <p align="center"> <img src="IMAGE/image4.png" width="65%" height="auto" /> </p>
  
 •	La méthode permet d’éviter des calculs inutiles tout en obtenant une solution stable.
-
-
-
-
-
-
-
-
-
 
 # IV.	Étude de l’influence de la taille du domaine de calcul
 
@@ -163,38 +149,8 @@ V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1))
 ### 3. Visualisation des résultats
 •	Une figure est générée pour chaque taille de domaine, montrant la distribution finale du potentiel après convergence.
 
-
-
-
-
-
 ## Résultats :
  <p align="center"> <img src="IMAGE/image5.png" width="65%" height="auto" /> </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # V.	Affichage des lignes équipotentielles
 
@@ -220,7 +176,9 @@ des interactions électrostatiques dans le système.
 
 ### 3. Visualisation des lignes équipotentielles :
 • La fonction contour est utilisée pour tracer les lignes équipotentielles superposées à la carte de couleurs du potentiel V.
- <p align="center"> <img src="IMAGE/image6.png" width="65%" height="auto" /> </p>
+
+ <p align="center"> <img src="IMAGE/image6.jpg" width="65%" height="auto" /> </p>
+ 
 • Les figures obtenues montrent les lignes équipotentielles pour chaque taille de domaine, mettant en évidence les transitions entre les zones de potentiel.
  
 # VI.	Calcul du champ électrostatique
