@@ -1,7 +1,7 @@
 <p align="center"> <img src="IMAGE/logo ENSEA.png" width="30%" height="auto" /> </p>
 
 #                                                            ESE_CME_2425
-JAQUOT NOLAN GUIFFAULT GABRIEL
+JACQUOT NOLAN GUIFFAULT GABRIEL ESE 2024
 ## I.	Exécution du script tp00.m
 Objectif de cette étape
 L’objectif de cette étape est d’exécuter un script MATLAB/Octave permettant de résoudre numériquement l’équation de Laplace en 2D à l’aide de la méthode des différences finies. Ce script initialise un domaine de calcul de dimensions 40×40 avec des potentiels sources et des conditions aux limites, et produit une visualisation graphique du potentiel V dans tout le domaine.
