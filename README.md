@@ -266,3 +266,45 @@ Qi = ε0 ∮ E⃗ ⋅ dS⃗
 Cij = Qi / (Vj − Vi)
 
 <p align="center"> <img src="IMAGE/image9.png" width="65%" height="auto" /> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Limitations du modèle :
+1.	Discrétisation de l'espace :
+o	La méthode des différences finies (DF) repose sur une discrétisation du domaine, ce qui introduit des approximations dans les calculs des dérivées. Ces approximations sont d'autant plus significatives que la résolution spatiale (dx, dy) est faible.
+o	Pour des géométries complexes, la représentation discrète peut déformer ou simplifier les formes réelles, ce qui altère les résultats.
+2.	Conditions aux limites :
+o	Les conditions aux limites imposées sont simplifiées et rigides. Par exemple, les conducteurs sont définis comme des rectangles discrets, ce qui ne reflète pas leur géométrie réelle.
+o	Si le domaine est trop petit, les effets des bords artificiels peuvent perturber les résultats.
+3.	Hypothèses du modèle :
+o	Le modèle suppose que le milieu est homogène, isotrope, et linéaire (ϵ0 constant). Toute variation spatiale ou anisotropie de la permittivité est ignorée.
+o	Les charges sont supposées distribuées de manière uniforme sur les conducteurs.
+4.	Critères de convergence :
+o	La méthode itérative peut échouer à converger si le seuil ou le nombre d'itérations maximum est mal paramétré.
+o	Même avec une convergence, l'erreur numérique peut subsister en raison des approximations dans les calculs intermédiaires.
+Différences entre valeur théorique et valeur numérique :
+1.	Erreur de discrétisation :
+o	Les différences finies approximent les dérivées par des rapports finis, ce qui introduit une erreur qui dépend de la taille de la grille. Une grille plus fine réduit cette erreur mais augmente le temps de calcul.
+2.	Effet des bords :
+o	Dans le modèle numérique, les bords du domaine peuvent influencer les solutions près des conducteurs. Ces effets n'existent pas dans une solution théorique où le domaine est supposé infini.
+3.	Interpolation des charges :
+o	Dans le modèle numérique, les charges sont placées sur une grille discrète. Cette interpolation peut produire des champs légèrement différents de la solution théorique.
+4.	Erreurs cumulées :
+o	Les erreurs liées à la discrétisation, aux itérations, et aux artefacts numériques s'accumulent, rendant la solution numérique légèrement différente de la solution théorique.
+
