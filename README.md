@@ -6,7 +6,7 @@ JAQUOT NOLAN GUIFFAULT GABRIEL
 Objectif de cette étape
 L’objectif de cette étape est d’exécuter un script MATLAB/Octave permettant de résoudre numériquement l’équation de Laplace en 2D à l’aide de la méthode des différences finies. Ce script initialise un domaine de calcul de dimensions 40×40 avec des potentiels sources et des conditions aux limites, et produit une visualisation graphique du potentiel V dans tout le domaine.
 ### Description et analyse du script
-_1. Définition des paramètres et du domaine de calcul_
+### _1. Définition des paramètres et du domaine de calcul_
 
 •	Les dimensions du maillage unitaire  (dx=1, dy=1) ainsi que le nombre de cellules (Nx=40, Ny=40) sont définis pour le domaine.
 
@@ -18,15 +18,16 @@ _1. Définition des paramètres et du domaine de calcul_
  
  o	V2=−100V pour le second conducteur.
  
-_2. Initialisation et conditions aux limites_
+### _2. Initialisation et conditions aux limites_
 
 •	Une matrice V est initialisée à zéro pour représenter le potentiel dans tout le domaine.
 
 •	Les conditions aux limites sont appliquées sur les bords du domaine, garantissant V=0 sur les extrémités (x=1, x=40, y=1, y=40).
 
-_3. Définition des conducteurs_
+### _3. Définition des conducteurs_
    
 Les conducteurs sont positionnés dans le domaine :
+
 •	Le premier conducteur est représenté par une barre horizontale située entre les cellules (25:28,8:34) avec un potentiel V=100.
 
 •	Le second conducteur est une barre verticale entre les cellules (5:22,20:21)(5:22, 20:21)(5:22,20:21) avec un potentiel V=−100V.
@@ -39,9 +40,10 @@ Les conducteurs sont positionnés dans le domaine :
 
 
 
-5. Visualisation des résultats
+## 5. Visualisation des résultats
+   
 Deux représentations graphiques sont produites :
- 1.	Visualisation des conditions initiales
+### 1.	Visualisation des conditions initiales
  Ce graphe montre les conducteurs +100 V (en rouge) et −100V (en bleu) dans un domaine initialisé à V=0 :
  
 
