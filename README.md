@@ -125,8 +125,10 @@ V : V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1));
 
 o	Avec seuil=0.01, la convergence est atteinte en environ 284 itérations :
  <p align="center"> <img src="IMAGE/image3.png" width="65%" height="auto" /> </p>
-o	Avec seuil=0.001, la convergence est atteinte en environ 491 itérations :.
-o	<p align="center"> <img src="IMAGE/image4.png" width="65%" height="auto" /> </p>
+o	Avec seuil=0.001, la convergence est atteinte en environ 491 itérations :
+
+	<p align="center"> <img src="IMAGE/image4.png" width="65%" height="auto" /> </p>
+ 
 •	La méthode permet d’éviter des calculs inutiles tout en obtenant une solution stable.
 
 
@@ -138,26 +140,39 @@ o	<p align="center"> <img src="IMAGE/image4.png" width="65%" height="auto" /> </
 
 
 
-## IV.	Étude de l’influence de la taille du domaine de calcul
-Objectif de cette étape
+# IV.	Étude de l’influence de la taille du domaine de calcul
+
+## Objectif de cette étape
 Cette étape explore l'effet de la taille du domaine de calcul sur la distribution du potentiel V et la convergence des résultats. En augmentant ou réduisant les dimensions du domaine (Nx×Ny), on évalue l'impact sur la répartition des potentiels et la précision de la solution.
 Méthode et description du script
-1. Dimensions variables
+### 1. Dimensions variables
+
 •	Le domaine de calcul est testé pour plusieurs tailles : 10×10, 20×20, 40×40, 80×80, et 100×100.
+
 •	Les proportions des cellules sources (V1=+100V et V2=−100V) sont ajustées proportionnellement à la taille du domaine.
-2. Boucle de calcul pour chaque taille
+### 2. Boucle de calcul pour chaque taille
 Initialisation :
+
 •	Les conditions aux limites (V=0) sont appliquées sur tous les bords du domaine.
+
 •	Une matrice V est initialisée à zéro pour représenter le potentiel dans tout le domaine.
+
 Itérations pour chaque taille :
-•	À chaque itération, le potentiel V est mis à jour selon la méthode des différences finies : 
+
+•	À chaque itération, le potentiel V est mis à jour selon la méthode des différences finies :
+
 V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1))
+
 •	Les potentiels des conducteurs (v1 et v2) sont réimposés pour garantir leur stabilité.
-Critère de convergence :
+
+## Critère de convergence :
 •	Une copie de V (Vold) est conservée à chaque itération.
+
 •	La variation maximale entre deux itérations est calculée : diff=max(∣V−Vold∣)
+
 •	La boucle s’arrête si diff<seuil (seuil=0.01) ou si le nombre maximum d’itérations (max_iterations=1000) est atteint.
-3. Visualisation des résultats
+
+### 3. Visualisation des résultats
 •	Une figure est générée pour chaque taille de domaine, montrant la distribution finale du potentiel après convergence.
 
 
@@ -165,5 +180,5 @@ Critère de convergence :
 
 
 
-Résultats : 
-
+## Résultats :
+ <p align="center"> <img src="IMAGE/image5.png" width="65%" height="auto" /> </p>
