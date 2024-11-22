@@ -42,26 +42,25 @@ Les conducteurs sont positionnés dans le domaine :
 
 ## 5. Visualisation des résultats
    
-Deux représentations graphiques sont produites :
+Cette représentation graphique est produite :
 ### 1.	Visualisation des conditions initiales
  Ce graphe montre les conducteurs +100 V (en rouge) et −100V (en bleu) dans un domaine initialisé à V=0 :
  
 
 <p align="center"> <img src="IMAGE/image1.png" width="65%" height="auto" /> </p>
 
-
-
-
-
-
-
-
-
-
+> [!TIP]
+> ````
+> figure(11);
+> colormap("jet");
+> pcolor(V);
+> ````
+> permet d'obtenir le meme schéma de couleur que le sujet, ce qui permet de mieux reperer les erreurs éventuelles.
 
 
 
 ## II.	Résolution itérative de l’équation de Laplace (200 itérations)
+
 Objectif de cette étape
 L’objectif est de modifier le script MATLAB/Octave pour résoudre numériquement l’équation de Laplace en 2D à l’aide de la méthode des différences finies (DF) sur un domaine de 40×40. Cette résolution itérative (200 itérations) permet d’obtenir une distribution stable du potentiel V dans tout le domaine.
 Description de la méthode et du script
