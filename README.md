@@ -319,9 +319,10 @@ o	Les erreurs liées à la discrétisation, aux itérations, et aux artefacts nu
 
 
 
-Calcul de la capacité d'une structure coaxiale
+## Calcul de la capacité d'une structure coaxiale
+
 Ce document présente le calcul théorique et numérique de la capacité d'une structure coaxiale. Un câble coaxial est constitué d'un conducteur interne de rayon r1, d'un conducteur externe de rayon r2, et d'un milieu diélectrique homogène de permittivité ε = ε₀·εr entre les deux.
-Calcul théorique
+## Calcul théorique
 La capacité par unité de longueur pour un câble coaxial est donnée par la formule suivante :
 C = (2π·ε·L) / ln(r₂ / r₁)
 où :
@@ -329,21 +330,24 @@ où :
 - r₂ : rayon du conducteur externe
 - L : longueur du câble
 - ε = ε₀·εr : permittivité du matériau entre les conducteurs.
-Calcul numérique
+### Calcul numérique
 Pour calculer la capacité numériquement, les étapes suivantes sont réalisées :
-1. Discrétisation : Représenter une section transversale du câble coaxial dans une grille discrète.
-2. Résolution de l'équation de Laplace : Utiliser la méthode des différences finies pour obtenir le potentiel V entre r₁ et r₂.
-3. Calcul du champ électrique : À partir du potentiel V, déterminer les composantes du champ électrique Ex et Ey via le gradient.
-4. Calcul de la charge : Intégrer les composantes du champ électrique autour du conducteur interne r₁ pour obtenir la charge totale Q :
+ 1. Discrétisation : Représenter une section transversale du câble coaxial dans une grille discrète.
+ 2. Résolution de l'équation de Laplace : Utiliser la méthode des différences finies pour obtenir le potentiel V entre r₁ et r₂.
+ 3. Calcul du champ électrique : À partir du potentiel V, déterminer les composantes du champ électrique Ex et Ey via le gradient.
+ 4. Calcul de la charge : Intégrer les composantes du champ électrique autour du conducteur interne r₁ pour obtenir la charge totale Q :
 Q = ∮(ε·E · dS)
-5. **Capacité** : La capacité est ensuite donnée par :
+ 5. **Capacité** : La capacité est ensuite donnée par :
 C = Q / (v₁ - v₂)
-Comparaison entre calcul théorique et numérique
+## Comparaison entre calcul théorique et numérique
 Les résultats théoriques et numériques peuvent être comparés pour valider le modèle numérique. Les écarts entre les deux approches dépendent principalement de :
+
 - La résolution de la grille discrète (plus elle est fine, plus l'approximation est précise).
+  
 - La qualité de la représentation des conducteurs dans la grille discrète.
+  
 - Les conditions aux limites imposées dans le modèle.
-Conclusion
+## Conclusion
 La méthode numérique permet d'obtenir une estimation précise de la capacité d'une structure coaxiale, même dans des configurations où la géométrie est complexe ou les conditions aux limites sont irrégulières. Bien que les résultats théoriques soient idéaux, les simulations numériques offrent une flexibilité et une précision adaptées aux applications pratiques.
 
 
