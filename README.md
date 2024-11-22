@@ -40,7 +40,7 @@ Les conducteurs sont positionnés dans le domaine :
 
 
 
-## 5. Visualisation des résultats
+##  Visualisation des résultats
    
 Cette représentation graphique est produite :
 ### 1.	Visualisation des conditions initiales
@@ -59,39 +59,57 @@ Cette représentation graphique est produite :
 
 
 
-## II.	Résolution itérative de l’équation de Laplace (200 itérations)
+# II.	Résolution itérative de l’équation de Laplace (200 itérations)
 
-Objectif de cette étape
+## Objectif de cette étape
 L’objectif est de modifier le script MATLAB/Octave pour résoudre numériquement l’équation de Laplace en 2D à l’aide de la méthode des différences finies (DF) sur un domaine de 40×40. Cette résolution itérative (200 itérations) permet d’obtenir une distribution stable du potentiel V dans tout le domaine.
-Description de la méthode et du script
+### Description de la méthode et du script
 Dans cette étape, une boucle itérative est ajoutée pour appliquer l’équation discrétisée de Laplace :
+
 V(i,j)=0.25*( V(i+1,j) + V(i-1,j) + V(i,j+1) + V(i,j-1) )
+
 Le potentiel est calculé pour chaque point du domaine interne (excluant les bords) jusqu’à convergence approximative après 200 itérations.
-Modifications apportées au script
+
+### Modifications apportées au script
 1.	Ajout d’une boucle itérative pour mettre à jour les valeurs de V(i,j) selon la méthode DF.
-2.	Réimposition des potentiels fixes +100V et −100V sur les conducteurs à chaque itération pour garantir leur stabilité.
+   
+3.	Réimposition des potentiels fixes +100V et −100V sur les conducteurs à chaque itération pour garantir leur stabilité.
 
-Résultat
+### Résultat
 Ce graphe obtenu montre une distribution stable du potentiel après 200 itérations :
-•	Une transition progressive entre les potentiels +100V (en rouge) et −100V (en bleu).
-•	Un gradient de potentiel visible dans tout le domaine, illustrant les interactions entre les deux conducteurs.
- 
 
-## III.	Convergence et seuil de convergence
-Objectif de cette étape
+•	Une transition progressive entre les potentiels +100V (en rouge) et −100V (en bleu).
+
+•	Un gradient de potentiel visible dans tout le domaine, illustrant les interactions entre les deux conducteurs.
+
+ <p align="center"> <img src="IMAGE/image2.png" width="65%" height="auto" /> </p>
+
+# III.	Convergence et seuil de convergence
+
+## Objectif de cette étape
 L’objectif est de résoudre l’équation de Laplace en 2D en ajoutant un critère de convergence basé sur la variation maximale du potentiel V entre deux itérations successives. Cette méthode permet d’arrêter la simulation lorsque la solution devient suffisamment stable, évitant ainsi un nombre arbitraire d’itérations.
-Méthode et description du script
-1. Paramètres de convergence
+## Méthode et description du script
+### 1. Paramètres de convergence
+
 •	Seuil de convergence (seuil) : Définit la précision souhaitée pour la variation maximale du potentiel entre deux itérations successives. Dans ce script, le seuil est défini à 0.010.010.01, mais d'autres valeurs (0.001,0.0001,…)peuvent être testées.
+
 •	Nombre maximum d’itérations (max_iterations) : Définit une limite pour éviter des boucles infinies si la convergence n'est pas atteinte.
-2. Boucle de calcul
+
+### 2. Boucle de calcul
 •	À chaque itération, une copie de l’état précédent du potentiel (V) est conservée dans Vold.
+
 •	La méthode des différences finies est appliquée pour mettre à jour 
+
 V : V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1));
+
 •	Les potentiels des conducteurs (v1 et v2) sont réimposés après chaque mise à jour pour garantir leur stabilité.
+
 •	Le test de convergence compare V et Vold en calculant la variation maximale : diff=max(∥V−Vold∥)
+
 •	La boucle s’arrête si la variation maximale devient inférieure au seuil.
-3. Visualisation des résultats
+
+### 3. Visualisation des résultats
+
 •	Le potentiel V final est affiché avec pcolor après la convergence ou après avoir atteint le nombre maximum d’itérations.
 
 
@@ -102,12 +120,13 @@ V : V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1));
 
 
 
-Résultats 
+## Résultats 
 •	Le nombre d’itérations nécessaire pour atteindre la convergence dépend du seuil choisi (0.01,0.001, etc.). Par exemple :
+
 o	Avec seuil=0.01, la convergence est atteinte en environ 284 itérations :
- 
+ <p align="center"> <img src="IMAGE/image3.png" width="65%" height="auto" /> </p>
 o	Avec seuil=0.001, la convergence est atteinte en environ 491 itérations :.
-o	 
+o	<p align="center"> <img src="IMAGE/image4.png" width="65%" height="auto" /> </p>
 •	La méthode permet d’éviter des calculs inutiles tout en obtenant une solution stable.
 
 
