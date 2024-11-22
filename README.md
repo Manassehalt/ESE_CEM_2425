@@ -213,7 +213,9 @@ Ex = −∂V/∂x, Ey = −∂V/∂y
 • Une représentation graphique du potentiel V est superposée aux lignes équipotentielles à l’aide de la fonction contour.
 
 • Les vecteurs représentant le champ électrique E⃗ sont affichés avec la fonction quiver, indiquant la direction et la magnitude du champ en chaque point.
+
 <p align="center"> <img src="IMAGE/image7.png" width="65%" height="auto" /> </p>
+
 # VII.	 Calculs de capacités
 
 
@@ -254,7 +256,7 @@ Qi = ε0 ∮ E⃗ ⋅ dS⃗
 - Bord haut : Contribution de Ex le long du haut.
   
 - Bord bas : Contribution de Ex le long du bas.
-
+<p align="center"> <img src="IMAGE/image9.png" width="65%" height="auto" /> </p>
 
   
 ### 4. Calcul de la capacité Cij :
