@@ -33,13 +33,6 @@ Les conducteurs sont positionnés dans le domaine :
 •	Le second conducteur est une barre verticale entre les cellules (5:22,20:21)(5:22, 20:21)(5:22,20:21) avec un potentiel V=−100V.
 
 
-
-
-
-
-
-
-
 ##  Visualisation des résultats
    
 Cette représentation graphique est produite :
@@ -115,11 +108,6 @@ V : V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1));
 
 
 
-
-
-
-
-
 ## Résultats 
 •	Le nombre d’itérations nécessaire pour atteindre la convergence dépend du seuil choisi (0.01,0.001, etc.). Par exemple :
 
@@ -184,9 +172,7 @@ V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1))
  <p align="center"> <img src="IMAGE/image5.png" width="65%" height="auto" /> </p>
 
 
- <p align="center"> <img src="IMAGE/image6.png" width="65%" height="auto" /> </p>
- <p align="center"> <img src="IMAGE/image7.png" width="65%" height="auto" /> </p>
-  <p align="center"> <img src="IMAGE/image8.png" width="65%" height="auto" /> </p>
+
 
 
 
@@ -234,9 +220,9 @@ des interactions électrostatiques dans le système.
 
 ### 3. Visualisation des lignes équipotentielles :
 • La fonction contour est utilisée pour tracer les lignes équipotentielles superposées à la carte de couleurs du potentiel V.
-
+ <p align="center"> <img src="IMAGE/image6.png" width="65%" height="auto" /> </p>
 • Les figures obtenues montrent les lignes équipotentielles pour chaque taille de domaine, mettant en évidence les transitions entre les zones de potentiel.
-
+ 
 # VI.	Calcul du champ électrostatique
 
 ## Objectif de cette étape :
@@ -269,7 +255,7 @@ Ex = −∂V/∂x, Ey = −∂V/∂y
 • Une représentation graphique du potentiel V est superposée aux lignes équipotentielles à l’aide de la fonction contour.
 
 • Les vecteurs représentant le champ électrique E⃗ sont affichés avec la fonction quiver, indiquant la direction et la magnitude du champ en chaque point.
-
+<p align="center"> <img src="IMAGE/image7.png" width="65%" height="auto" /> </p>
 # VII.	 Calculs de capacités
 
 
@@ -311,6 +297,7 @@ Qi = ε0 ∮ E⃗ ⋅ dS⃗
   
 - Bord bas : Contribution de Ex le long du bas.
 
+  <p align="center"> <img src="IMAGE/image8.png" width="65%" height="auto" /> </p>
 ### 4. Calcul de la capacité Cij :
 
 • La capacité entre les conducteurs est obtenue par la relation :
