@@ -182,3 +182,6 @@ V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1))
 
 ## Résultats :
  <p align="center"> <img src="IMAGE/image5.png" width="65%" height="auto" /> </p>
+
+
+ <p align="center"> <img src="IMAGE/image5.png" width="65%" height="auto" /> </p>
