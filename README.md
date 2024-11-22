@@ -1,8 +1,10 @@
 <p align="center"> <img src="IMAGE/logo ENSEA.png" width="30%" height="auto" /> </p>
 
-#                                                            ESE_CME_2425
+#                                                            ESE_CEM_2425
 JACQUOT NOLAN GUIFFAULT GABRIEL ESE 2024
 ## I.	Exécution du script tp00.m
+
+https://github.com/Manassehalt/ESE_CME_2425/blob/main/tp00.m
 
 ## Objectif de cette étape
 L’objectif de cette étape est d’exécuter un script MATLAB/Octave permettant de résoudre numériquement l’équation de Laplace en 2D à l’aide de la méthode des différences finies. Ce script initialise un domaine de calcul de dimensions 40×40 avec des potentiels sources et des conditions aux limites, et produit une visualisation graphique du potentiel V dans tout le domaine.
@@ -65,6 +67,8 @@ Cette représentation graphique est produite :
 
 # II.	Résolution itérative de l’équation de Laplace (200 itérations)
 
+https://github.com/Manassehalt/ESE_CME_2425/blob/main/tp02.m
+
 ## Objectif de cette étape
 L’objectif est de modifier le script MATLAB/Octave pour résoudre numériquement l’équation de Laplace en 2D à l’aide de la méthode des différences finies (DF) sur un domaine de 40×40. Cette résolution itérative (200 itérations) permet d’obtenir une distribution stable du potentiel V dans tout le domaine.
 ### Description de la méthode et du script
@@ -89,7 +93,7 @@ Ce graphe obtenu montre une distribution stable du potentiel après 200 itérati
  <p align="center"> <img src="IMAGE/image2.png" width="65%" height="auto" /> </p>
 
 # III.	Convergence et seuil de convergence
-
+https://github.com/Manassehalt/ESE_CME_2425/blob/main/tp03.m
 ## Objectif de cette étape
 L’objectif est de résoudre l’équation de Laplace en 2D en ajoutant un critère de convergence basé sur la variation maximale du potentiel V entre deux itérations successives. Cette méthode permet d’arrêter la simulation lorsque la solution devient suffisamment stable, évitant ainsi un nombre arbitraire d’itérations.
 ## Méthode et description du script
@@ -128,7 +132,7 @@ o	Avec seuil=0.001, la convergence est atteinte en environ 491 itérations :
 •	La méthode permet d’éviter des calculs inutiles tout en obtenant une solution stable.
 
 # IV.	Étude de l’influence de la taille du domaine de calcul
-
+https://github.com/Manassehalt/ESE_CME_2425/blob/main/tp04.m
 ## Objectif de cette étape
 Cette étape explore l'effet de la taille du domaine de calcul sur la distribution du potentiel V et la convergence des résultats. En augmentant ou réduisant les dimensions du domaine (Nx×Ny), on évalue l'impact sur la répartition des potentiels et la précision de la solution.
 Méthode et description du script
@@ -166,7 +170,7 @@ V(i, j) = 0.25 * (V(i+1, j) + V(i-1, j) + V(i, j+1) + V(i, j-1))
  <p align="center"> <img src="IMAGE/image5.png" width="65%" height="auto" /> </p>
 
 # V.	Affichage des lignes équipotentielles
-
+https://github.com/Manassehalt/ESE_CME_2425/blob/main/tp05.m
 ## Objectif de cette étape :
 L’objectif est de visualiser les lignes équipotentielles du potentiel V dans le domaine de calcul.
 Ces lignes représentent les zones où le potentiel est constant, offrant une meilleure compréhension
@@ -195,7 +199,7 @@ des interactions électrostatiques dans le système.
 • Les figures obtenues montrent les lignes équipotentielles pour chaque taille de domaine, mettant en évidence les transitions entre les zones de potentiel.
  
 # VI.	Calcul du champ électrostatique
-
+https://github.com/Manassehalt/ESE_CME_2425/blob/main/tp06.m
 ## Objectif de cette étape :
 L’objectif est de calculer et de représenter les composantes du champ électrique E⃗ dans tout le domaine de calcul.
 Le champ électrique est obtenu en calculant le gradient du potentiel V, ce qui permet de visualiser les interactions électrostatiques à travers le domaine.
@@ -230,7 +234,7 @@ Ex = −∂V/∂x, Ey = −∂V/∂y
 <p align="center"> <img src="IMAGE/image7.png" width="65%" height="auto" /> </p>
 
 # VII.	 Calculs de capacités
-
+https://github.com/Manassehalt/ESE_CME_2425/blob/main/tp07.m
 
 ## Objectif de cette étape :
 
