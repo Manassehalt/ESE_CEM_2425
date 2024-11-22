@@ -331,7 +331,7 @@ Pour calculer la capacité numériquement, les étapes suivantes sont réalisée
 2. Résolution de l'équation de Laplace : Utiliser la méthode des différences finies pour obtenir le potentiel V entre r₁ et r₂.
 3. Calcul du champ électrique : À partir du potentiel V, déterminer les composantes du champ électrique Ex et Ey via le gradient.
 4. Calcul de la charge : Intégrer les composantes du champ électrique autour du conducteur interne r₁ pour obtenir la charge totale Q :
-Q = ∮▒〖(ε·E · dS)〗 
+Q = ∮(ε·E · dS)
 5. **Capacité** : La capacité est ensuite donnée par :
 C = Q / (v₁ - v₂)
 Comparaison entre calcul théorique et numérique
