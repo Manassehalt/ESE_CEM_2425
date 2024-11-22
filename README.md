@@ -297,7 +297,8 @@ Qi = ε0 ∮ E⃗ ⋅ dS⃗
   
 - Bord bas : Contribution de Ex le long du bas.
 
-  <p align="center"> <img src="IMAGE/image8.png" width="65%" height="auto" /> </p>
+
+  
 ### 4. Calcul de la capacité Cij :
 
 • La capacité entre les conducteurs est obtenue par la relation :
