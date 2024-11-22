@@ -256,7 +256,7 @@ Qi = ε0 ∮ E⃗ ⋅ dS⃗
 - Bord haut : Contribution de Ex le long du haut.
   
 - Bord bas : Contribution de Ex le long du bas.
-<p align="center"> <img src="IMAGE/image9.png" width="65%" height="auto" /> </p>
+
 
   
 ### 4. Calcul de la capacité Cij :
@@ -265,3 +265,4 @@ Qi = ε0 ∮ E⃗ ⋅ dS⃗
 
 Cij = Qi / (Vj − Vi)
 
+<p align="center"> <img src="IMAGE/image9.png" width="65%" height="auto" /> </p>
